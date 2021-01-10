@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 {
     "github": {
         "username": "<username>",
         "token": "<gh-personal-access-token>"
     }
 }
+=======
+{
+    "github": {
+        "token": "<gh-personal-access-token>"
+    }
+}
+>>>>>>> a1bf3f3823c3d9a07019a2497383a151cf475af6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Test
 on:
   pull_request:
@@ -20,3 +21,20 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: yarn
       - run: yarn test:ci
+=======
+name: Test
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - 'renovate/*'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/'))
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn
+      - run: yarn test:ci
+>>>>>>> a1bf3f3823c3d9a07019a2497383a151cf475af6

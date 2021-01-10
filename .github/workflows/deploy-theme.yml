@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Deploy Theme
 on:
   push:	
@@ -13,3 +14,21 @@ jobs:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
           theme-name: "casper-master"
+=======
+name: Deploy Theme
+on:
+  push:
+    branches:
+      - master
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: TryGhost/action-deploy-theme@v1.4.1
+        with:
+          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+          theme-name: "casper-master"
+>>>>>>> a1bf3f3823c3d9a07019a2497383a151cf475af6
